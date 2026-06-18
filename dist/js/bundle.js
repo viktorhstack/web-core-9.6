@@ -60,7 +60,6 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ "./src/scss/style.scss");
 
-console.log('It works!');
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map

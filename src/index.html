@@ -10,7 +10,55 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 5 starter </h3>
+  <div class="sidebar">
+      <div class="sidebar__header">
+        <button class="sidebar__header-button">
+          <img src="./img/close.svg" alt="Закрыть" />
+        </button>
+        <a class="sidebar__logo" href="/">
+          <img src="./img/logo.svg" alt="Логотип" />
+        </a>
+        <button class="sidebar__header-button sidebar__search">
+          <img src="./img/search.svg" alt="Поиск" />
+        </button> 
+      </div>
+
+        <div class="sidebar__line"></div>
+
+      <nav class="sidebar__menu">
+        <a class="sidebar__menu-item sidebar__menu-item-active" href="/"> Ремонт техники</a>
+        <a class="sidebar__menu-item" href="/">Услуги и сервисы</a>
+        <a class="sidebar__menu-item" href="/">Корпоративным клиентам</a>
+        <a class="sidebar__menu-item" href="/">Продавцам техники</a>
+        <a class="sidebar__menu-item" href="/">Партнерам</a>
+        <a class="sidebar__menu-item" href="/">Производителям</a>
+        <a class="sidebar__menu-item" href="/">Наши сервисные центры</a>
+        <a class="sidebar__menu-item" href="/">Контакты</a>
+
+        <div class="sidebar__footer">
+
+          <div class="sidebar__footer-button">
+          <button class="sidebar__footer-button">
+            <img src="./img/call.svg" alt="Телефон" />
+          </button>
+          <button class="sidebar__footer-button">
+            <img src="./img/chat.svg" alt="Чат" />
+          </button>
+          <button class="sidebar__footer-button">
+            <img src="./img/profile.svg" alt="Профиль" />
+          </button>
+           </div>
+
+          <a class="sidebar__footer-email" href="mailto:mail@cps.com">mail@cps.com</a>
+
+          <a class="sidebar__footer-phone" href="tel:88008908900">8 800 890 8900</a>
+
+          <div class="sidebar__footer-lang">
+            <a href="/" class="sidebar__footer-lang-link sidebar__footer-lang-link-active">RU</a>
+            <a href="/" class="sidebar__footer-lang-link" sidebar__footer-lang-link>EN</a>
+            <a href="/" class="sidebar__footer-lang-link" sidebar__footer-lang-link>CN</a>
+          </div>
+          
+           </div>  
   </body>
 </html>
