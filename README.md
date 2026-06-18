@@ -12,7 +12,7 @@
 
 ## Live Preview
 
-[Open Project]( https://viktorhstack.github.io/web-core-8.5/)
+[Open Project]( https://viktorhstack.github.io/web-core-9.6/)
 
 ## Author
 
