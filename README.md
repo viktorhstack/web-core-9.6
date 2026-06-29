@@ -12,9 +12,8 @@
 
 ## Live Preview
 
-[Open Project]( https://viktorhstack.github.io/web-core-9.6/)
+[Open Project](https://viktorhstack.github.io/web-core-9.6/)
 
 ## Author
 
 VIKTOR KHEGAI
-
