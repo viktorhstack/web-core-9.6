@@ -1,0 +1,111 @@
+.repair-types {
+
+     margin-left: 320px;
+     max-width: calc(100% - 320px);
+     background-color: #f8f8f8;
+     padding: 0 0 24px;
+     box-sizing: border-box;
+}
+
+.repair-types .header__main {
+    border-top: 1px solid #d9fff5;
+    background: linear-gradient(90deg,#f8f8f8 0%, #f8f8f8 20%, #ffffff 45%, #ffffff 100%);
+
+    margin: 0;
+    padding: 16px 32px;
+}
+   .repair-types .header__main {
+    color: #7e7e82;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+
+
+
+.repair-types__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding: 24px 32px 0;
+   
+}
+
+.repair-types__card {
+    width: calc((100% - 109px) / 4);
+    height: 160px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.repair-types__button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff3e79;
+    border-radius: 50%;
+    background: transparent;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.repair-types__button {
+position: relative;
+}
+
+.repair-types__button::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #ff3e79;
+    border-bottom: 2px solid #ff3e79;
+    transform: rotate(-45deg);
+}
+
+.repair-types__more {
+    display: inline-flex;
+    margin: 24px 0 0 0;
+    padding-left: 32px;
+    position: relative;
+    background: transparent;
+    border: none;
+    color: #1b1c21;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    cursor: pointer;
+
+   
+    
+   
+    
+} 
+.repair-types__more::before,
+.repair-types__more::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #41f6d7;
+    border-bottom: 2px solid #41f6d7;
+    transform: rotate(45deg);
+}
+
+.repair-types__more::before {
+    top: 4px;
+}  
+.repair-types__more::after {
+    top: 10px;
+}         

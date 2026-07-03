@@ -71,7 +71,6 @@
    
     font-size: 14px;
     line-height: 20px ;
-    color: #1b1c21;
    
 }
 .services__more {
@@ -187,7 +186,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
-    color: #1b1c21;
+    color: #7e7e82;
     padding-left: 34px;
 
 }
@@ -224,6 +223,10 @@
    
  }
  .services__title{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #1b1c21;
     margin-left:  30px;
  }
  .services__actions {
@@ -261,14 +264,9 @@ margin-left: 32px;
    margin-top: 5px;
 }
 
-.service__brands {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 24px auto 0;
-    gap: 32px;
+
    
-}
+
 
  .service__brands.swiper-pagination {
         max-width: none;
