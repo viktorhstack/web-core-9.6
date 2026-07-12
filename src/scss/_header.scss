@@ -10,7 +10,7 @@ header {
 
 
 
-.header__main {
+.repair-types__header {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -50,7 +50,7 @@ display: none;
     gap: 16px;
     padding-left: 0;
    
-}
+}ß
 
  .header__call,
     .header__chat,
@@ -69,13 +69,13 @@ display: none;
 
    }
    
-    .header__menu,
-    .header__logo,
-    .header__call,
-    .header__chat,
-    .header__profile {
-        display: none;
-    }
+    // .header__menu,
+    // .header__logo,
+    // .header__call,
+    // .header__chat,
+    // .header__profile {
+    //     display: none;
+    // }
 
     .header__repair-text,
     .header__text {
@@ -87,6 +87,69 @@ display: none;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-right: 32px;
+    padding-right: 24px;
 }
 
+.header__left {
+    display: none;
+}
+   @media (max-width: 1119px) {
+    .container {
+        max-width: none;
+        width: 100%;
+
+    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 24px;   
+    ;
+  }
+
+  .header__main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 0;
+  }
+
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: 0;
+    // transform: translateX(-24px);
+  }
+
+  .header__menu,
+  .header__logo,
+  .header__call,
+  .header__chat,
+  .header__profile {
+    display: block;
+  }
+
+  .header__repair-text,
+  .header__text {
+    display: none;
+  }
+
+ .header__action-button {
+
+    padding-right: 0;
+   
+}
+
+.divider--tablet-right {
+    display: block;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    margin: 0 20px;
+
+}
+
+}

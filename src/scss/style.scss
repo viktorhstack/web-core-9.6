@@ -29,15 +29,21 @@ body {
    
 }
 
+
 .container {
-    
-    width: 100%;
-    margin-left: 320px;
+  margin-left: 320px;
+  width: calc(100% - 320px);
 }
+    
+   
+
 
 @media(max-width:1119px){
-    .container{
+    .container {
         margin-left: 0;
+        width: 100%;
+     
+       
     }
 }
 .divider {
@@ -69,13 +75,13 @@ body {
         background-color: #eaeaea;
     }
     .divider--tablet-left {
-      margin-left: 20px; 
-      margin-right: 20px;
+      margin-left: 8px; 
+      margin-right: 8px;
         
     }
     .divider--tablet-right {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
            
         }
   }

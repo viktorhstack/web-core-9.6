@@ -1,20 +1,18 @@
 .repair-types {
-
-     margin-left: 320px;
-     max-width: calc(100% - 320px);
-     background-color: #f8f8f8;
+    width: 100%;
+    background-color: #f8f8f8;
      padding: 0 0 24px;
      box-sizing: border-box;
 }
 
-.repair-types .header__main {
+.repair-types .repair-types__header {
     border-top: 1px solid #d9fff5;
     background: linear-gradient(90deg,#f8f8f8 0%, #f8f8f8 20%, #ffffff 45%, #ffffff 100%);
 
     margin: 0;
     padding: 16px 32px;
 }
-   .repair-types .header__main {
+   .repair-types .repair-types__header {
     color: #7e7e82;
     font-size: 16px;
     font-weight: 400;
@@ -34,7 +32,7 @@
 }
 
 .repair-types__card {
-    width: calc((100% - 109px) / 4);
+    width: calc((100% - 72px) / 4);
     height: 160px;
     background-color: #ffffff;
     border: 1px solid #eaeaea;
@@ -109,3 +107,37 @@ position: relative;
 .repair-types__more::after {
     top: 10px;
 }         
+@media (min-width: 769px) and (max-width: 1119px) {
+  .repair-types {
+    width: 100%;
+    margin-left: 0;
+    max-width: none;
+  }
+
+  .repair-types__cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    padding: 24px 24px 0;
+    box-sizing: border-box;
+  }
+
+  .repair-types__card {
+    width: 100%;
+    min-width: 0;
+    height: 160px;
+  }
+
+  .repair-types__more {
+    margin: 24px 0 0;
+    padding-left: 56px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair-types {
+    margin-left: 320px;
+    max-width: calc(100% - 320px);
+  }
+}

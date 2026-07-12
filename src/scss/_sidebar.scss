@@ -12,6 +12,8 @@
     padding: 23px 24px 0 24px;
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80,0.2), 
     -2px 0 4px 0 rgba(69,79,126,0.02);
+    z-index: 1000;
+    transition: left 0.3s ease;
 
     
 }
@@ -20,7 +22,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom:46px; ;
+    margin-bottom:46px;
+    z-index: 1001;
     
 }
 .sidebar__logo {
@@ -34,12 +37,18 @@
    
 }
 .sidebar__header-button {
-    background: none;
+    position: relative;
+    z-index: 1002;
+    background: transparent;
     border: none;
     cursor: pointer;
     width: 40px;
     height: 40px;
     transition:opacity 0.3s;
+}
+
+.sidebar__header-button img{
+pointer-events: none;
 }
 
 .sidebar__header-button:hover {
@@ -150,3 +159,40 @@
     color: #7e7e82;
 }
 
+.sidebar__header-button:first-child {
+   display: none; 
+}
+
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 1119px) {
+  .sidebar {
+    left: -320px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.sidebar--open {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 320px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+  }
+
+  .sidebar-overlay.sidebar-overlay--open {
+    display: block;
+  }
+  .sidebar__header-button:first-child {
+    display: flex;
+  }
+}

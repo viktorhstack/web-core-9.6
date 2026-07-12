@@ -34,4 +34,37 @@ if (readMoreButton .classList.contains('active')) {
     }
 })
 
+const menuButton = document.querySelector('.header__menu-button');
+const closeButton = document.querySelector('.sidebar__close-button');
+const sidebar = document.querySelector('.sidebar');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
 
+const closeSidebar = () => {
+  sidebar.classList.remove('sidebar--open');
+  sidebarOverlay.classList.remove('sidebar-overlay--open');
+};
+
+if (menuButton && closeButton && sidebar && sidebarOverlay) {
+  menuButton.addEventListener('click', () => {
+    sidebar.classList.add('sidebar--open');
+    sidebarOverlay.classList.add('sidebar-overlay--open');
+  });
+
+  closeButton.addEventListener('click', closeSidebar);
+  sidebarOverlay.addEventListener('click', closeSidebar);
+}
+
+const button = document.querySelector('.services__more');
+const hiddenText = document.querySelector('.services__hidden-text');
+const tabletText = document.querySelector('.services__text--tablet');
+
+if (button && hiddenText && tabletText) {
+  button.addEventListener('click', () => {
+    hiddenText.classList.toggle('open');
+    tabletText.classList.toggle('open');
+
+    button.textContent = hiddenText.classList.contains('open')
+      ? 'Скрыть'
+      : 'Читать далее';
+  });
+}

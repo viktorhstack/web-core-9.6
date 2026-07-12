@@ -1,2 +1,114 @@
-(()=>{"use strict";const t=document.querySelector(".show__more-btn"),e=document.querySelectorAll(".hidden__brand");t.addEventListener("click",(()=>{e.forEach((t=>{t.classList.toggle("show")})),t.classList.toggle("active"),t.classList.contains("active")?t.textContent="Скрыть":t.textContent="Показать все"}));const s=document.querySelector(".services__more"),c=document.querySelector(".services__text");s.addEventListener("click",(()=>{c.classList.toggle("show"),s.classList.toggle("active"),s.classList.contains("active")?s.textContent="Скрыть":s.textContent="Читать далее"}))})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scss/style.scss":
+/*!*****************************!*\
+  !*** ./src/scss/style.scss ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ "./src/scss/style.scss");
+
+
+const showMoreButton = document.querySelector('.show__more-btn');
+const hiddenBrands = document.querySelectorAll('.hidden__brand');
+showMoreButton.addEventListener('click', () => {
+  hiddenBrands.forEach(brand => {
+    brand.classList.toggle('show');
+  });
+  showMoreButton.classList.toggle('active');
+  if (showMoreButton.classList.contains('active')) {
+    showMoreButton.textContent = 'Скрыть';
+  } else {
+    showMoreButton.textContent = 'Показать все';
+  }
+});
+const readMoreButton = document.querySelector('.services__more');
+const servicesText = document.querySelector('.services__text');
+readMoreButton.addEventListener('click', () => {
+  servicesText.classList.toggle('show');
+  readMoreButton.classList.toggle('active');
+  if (readMoreButton.classList.contains('active')) {
+    readMoreButton.textContent = 'Скрыть';
+  } else {
+    readMoreButton.textContent = 'Читать далее';
+  }
+});
+const menuButton = document.querySelector('.header__menu-button');
+const closeButton = document.querySelector('.sidebar__close-button');
+const sidebar = document.querySelector('.sidebar');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
+const closeSidebar = () => {
+  sidebar.classList.remove('sidebar--open');
+  sidebarOverlay.classList.remove('sidebar-overlay--open');
+};
+if (menuButton && closeButton && sidebar && sidebarOverlay) {
+  menuButton.addEventListener('click', () => {
+    sidebar.classList.add('sidebar--open');
+    sidebarOverlay.classList.add('sidebar-overlay--open');
+  });
+  closeButton.addEventListener('click', closeSidebar);
+  sidebarOverlay.addEventListener('click', closeSidebar);
+}
+const button = document.querySelector('.services__more');
+const hiddenText = document.querySelector('.services__hidden-text');
+if (button && hiddenText) {
+  button.addEventListener('click', () => {
+    hiddenText.classList.toggle('open');
+    button.textContent = hiddenText.classList.contains('open') ? 'Скрыть' : 'Читать далее';
+  });
+}
+/******/ })()
+;
 //# sourceMappingURL=bundle.js.map

@@ -9,7 +9,7 @@
   <body>
   <div class="sidebar">
       <div class="sidebar__header">
-        <button class="sidebar__header-button">
+        <button class="sidebar__header-button sidebar__close-button">
           <img src="./img/close.svg" alt="Закрыть">
         </button>
         <a class="sidebar__logo" href="/">
@@ -19,6 +19,7 @@
           <img src="./img/search.svg" alt="Поиск">
         </button> 
       </div>
+      <div class="sidebar-overlay"></div>
 
         <div class="sidebar__line"></div>
 
@@ -146,9 +147,11 @@
             <p class="services__text services__text--tablet">
               
                 Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                партнера, что подтверждает большое количество постоянных
+                партнера,
+                <span class="services__hidden-text"> что подтверждает большое количество постоянных
                 клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
                 и, в свою очередь, советуют нас родным и близким.
+                </span>
               </p>
 
                <div class="services__more"> Читать далее </div>
@@ -166,7 +169,7 @@
         
 
         <div class="brands__section">
-      <header class="header__main">
+      <header class="brands__header">
         <h2>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
       </header>
       
@@ -216,7 +219,7 @@
 
       <section class="repair-types">
 
-        <header class="header__main">
+        <header class="repair-types__header">
           <h2>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
       
         </header> 
