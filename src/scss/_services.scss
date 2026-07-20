@@ -288,27 +288,3 @@ margin-left: 32px;
 
 
 }
-@media (min-width: 1120px) and (max-width: 1279px) {
-  .services__content {
-    gap: 24px;
-  }
-
-  .services__info {
-    flex: 0 1 42%;
-    min-width: 0;
-  }
-
-  .services__image {
-    flex: 0 1 58%;
-    width: 58%;
-    min-width: 0;
-    margin: 5px 0 49px;
-    padding-right: 0;
-  }
-
-  .services__photo {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}

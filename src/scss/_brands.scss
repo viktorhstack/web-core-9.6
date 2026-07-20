@@ -2,7 +2,10 @@
  color: #7e7e82;
  }
  .brands__section .brands__header {
+    width: 100%;
     margin: 0;
+    padding: 16px 32px;
+    box-sizing: border-box;
     border-top: 1px solid #d9fff5;
     background: linear-gradient(90deg, #f8f8f8 0,#f8f8f8 20%, #ffffff 45%, #ffffff 100%); 
  }
@@ -15,7 +18,7 @@
     margin: 24px 0 0 32px;
     background: transparent;
     position: relative;
-    padding-left: 32px;
+    padding-left: 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -33,7 +36,7 @@
 .show__more-btn::after {
     content: "";
     position: absolute;
-    left: 6px;
+    left: 0px;
     transform: rotate(45deg);
     width: 6px;
     height: 6px;
@@ -87,12 +90,16 @@
     }
    
     .brands__section .brands__header {
-        background: transparent;
+        display: block;
         padding: 16px 32px;
+        box-sizing: border-box;
+        background: linear-gradient(90deg,#f8f8f8 0%, #f8f8f8 20%, #ffffff 100%);
     }
    
     .brands__section .brands__header h2 {
+        display: block;
         margin: 0;
+        color: #7e7e82;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
@@ -106,6 +113,9 @@
    height: 72px;
    display: flex;
    align-items: center;
+}
+.service__brands .brand__card.tablet-hidden {
+    display: flex !important;
 }
 
 
@@ -145,20 +155,27 @@
 
 @media (min-width: 769px) and (max-width: 1119px) {
     .brands__section {
-        padding: 16px 24px 24px;
+        width: 100%;
+        padding: 0 0 24px;
+        box-sizing: border-box;
        
     }
     .service__brands {
         width: 100%;
         max-width: none;
         margin: 24px 0 0;
+        padding: 0 24px;
+        box-sizing: border-box;
         overflow: visible;
      }
     .brand__card {
-        flex: 0 0 224px;
-        width: 224px;
-        margin: 0;
-        background-color:  #f8f8f8;
+       flex: 0 0 calc((100% - 32px) / 3);
+       width: calc((100% - 32px) / 3); 
+       min-width: 0;
+       margin: 0;
+       box-sizing: border-box;
+       background-color: #f8f8f8;
+}
     }
     .tablet-hidden {
         display: none;
@@ -171,14 +188,16 @@
     }
 
     .swiper-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        width: 100%;
-        max-width: 704px;
-        margin: 0 auto;
-        transform: none;
-    }
+    display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
+   width: 100%;
+   max-width: none;
+   margin: 0 auto;
+   transform: none;
+}
+        
+    
 
    .swiper-pagination {
     display: none;
@@ -194,23 +213,70 @@
         min-height: 24px;
         line-height: 24px;
     }
-}
+
     
 
 
 @media (max-width:320px) {
    
    .brands__section {
-        padding: 16px;
+        width: 100%;
+        padding: 0 0 24px;
+        box-sizing: border-box;
       
        
     }
-    .service__brands.swiper-pagination {
-        max-width: none;
+    .brands__section .brands__header {
+        width: 100%;
+        margin:0;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    .service__brands {
+        position: relative;
+        width: 100%;
+        margin: 16px 0 0;
+        padding-left: 16px;
+        box-sizing: border-box;
         overflow: hidden;
-      
+    }
+    .service__brands .swiper-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        transition-property: transform;
+        box-sizing: content-box;
+        
+    }
+    .service__brands .brand__card.swiper-slide{
+       flex-shrink: 0;
+       position: relative;
        
-     }
+    }
+   .service__brands .swiper-pagination {
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      margin: 16px 0 0;
+}
+
+.service__brands .swiper-pagination-bullet {
+     display: block;
+     flex: 0 0 12px;
+     width: 12px;
+     height: 12px;
+     margin: 0 ;
+     border-radius: 50%;
+     background-color: #dddddd;
+     opacity: 1;
+}
+
+.service__brands .swiper-pagination-bullet-active {
+    background-color: #b5b6bc;
+}
+
     .brand__card.swiper-slide {
         width: 240px;
         height: 72px;
@@ -247,7 +313,11 @@
         display: flex;
     }
 }
-
+@media(min-width: 1120px) {
+    .brands__section .show__more-btn{
+        margin: 24px 0 0 32px;
+    }
+}
 
   
 

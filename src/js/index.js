@@ -1,6 +1,6 @@
 import '../scss/style.scss'
 
-import '../scss/style.scss'
+import Swiper from 'swiper/bundle';
 
 const showMoreButton = document.querySelector('.show__more-btn')
 const hiddenBrands = document.querySelectorAll('.hidden__brand')
@@ -68,3 +68,28 @@ if (button && hiddenText && tabletText) {
       : 'Читать далее';
   });
 }
+let brandsSwiper = null;
+
+function initBrandsSwiper() {
+  const isMobile = window.matchMedia('(max-width: 320px)').matches;
+
+  if (isMobile && !brandsSwiper) {
+    brandsSwiper = new Swiper('.service__brands', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+
+      pagination: {
+        el: '.service__brands .swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+
+  if (!isMobile && brandsSwiper) {
+    brandsSwiper.destroy(true, true);
+    brandsSwiper = null;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initBrandsSwiper);
+window.addEventListener('resize', initBrandsSwiper);

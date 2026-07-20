@@ -6,10 +6,6 @@ header {
     background-color: #ffffff;
     
 }
-
-
-
-
 .repair-types__header {
     display: flex;
     align-items: center;
@@ -23,8 +19,6 @@ header {
     padding: 0;
     cursor: pointer;
 }
-
-
 .header__repair-text,
 .header__text {
 display: none;
@@ -68,16 +62,7 @@ display: none;
     display: none;
 
    }
-   
-    // .header__menu,
-    // .header__logo,
-    // .header__call,
-    // .header__chat,
-    // .header__profile {
-    //     display: none;
-    // }
-
-    .header__repair-text,
+   .header__repair-text,
     .header__text {
     display: block;
     font-family: "TT Lakes";
@@ -104,7 +89,8 @@ display: none;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 24px 24px;   
+    padding: 24px; 
+    box-sizing: border-box  
     ;
   }
 
@@ -153,3 +139,24 @@ display: none;
 }
 
 }
+@media (max-width: 768px) {
+.header {
+    padding: 16px;
+}
+.header__actions{
+    margin-left: auto;
+    gap: 16px;
+}
+.header__action-button--mobile-hidden {
+    display: none;
+  }
+.divider--mobile {
+    display: block;
+    width: 2px;
+    height: 32px;
+    margin: 0 16px 0 0;
+    background-color: #eaeaea;
+    flex-shrink: 0;
+}
+}
+
