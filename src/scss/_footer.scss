@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+
+  padding: 32px;
+  background-color: #f8f8f8;
+
+  color: #7e7e82;
+  font-size: 14px;
+  line-height: 16px;
+}
+.footer__copyright,
+.footer__privacy,
+.footer__information {
+  flex: 1 1 0;
+}
+
+.footer__privacy {
+  color: #7e7e82;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer__information {
+  text-align: right;
+}
+@media (min-width: 1120px) {
+  .footer {
+    width: calc(100% - 320px);
+    margin-left: 320px;
+    box-sizing: border-box;
+  }
+}

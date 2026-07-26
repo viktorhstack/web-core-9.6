@@ -178,7 +178,7 @@
         <section class="service__brands swiper">
           <div class="swiper-wrapper">
             <div class="brand__card swiper-slide">
-              <img src="img/lenovo.svg" alt="Lenovo">
+              <img class="brand__logo" src="img/lenovo.svg" alt="Lenovo">
             </div>
             <div class="brand__card swiper-slide">
               <img src="img/samsung.svg" alt="Samsung">
@@ -226,30 +226,100 @@
       
         </header> 
 
-        <div class="repair-types__cards">
-          <div class="repair-types__card">
+        <div class="repair-types__cards swiper">
+          <div class="swiper-wrapper">
+          <div class="repair-types__card swiper-slide">
             <span>Ремонт ноутбуков</span>
             <button class="repair-types__button"></button>
           </div>
-          <div class="repair-types__card">
+          <div class="repair-types__card swiper-slide">
             <span>Ремонт телефонов</span>
             <button class="repair-types__button"></button>
           </div>
-          <div class="repair-types__card">
+          <div class="repair-types__card swiper-slide">
             <span>Ремонт ПК</span>
             <button class="repair-types__button"></button>
           </div>
-          <div class="repair-types__card">
+          <div class="repair-types__card repair-types__card--hidden swiper-slide">
             <span>Ремонт мониторов</span>
             <button class="repair-types__button"></button>
           </div>
           </div>
-
+            <div class="repair-types__pagination swiper-pagination"></div>
+           </div>
           <button class="repair-types__more">Показать все</button>
             
-         
-        
-      </section>
+         </section>
+
+         <section class="prices">
+          <header class="prices__header">
+            <h2>ЦЕНЫ НА УСЛУГИ</h2>
+          </header>
+            
+             <div class="prices__services">
+              <div class="prices__row prices__row--header">
+                <span class="prices__service">Ремонтные услуги</span>
+                <span class="prices__price">Цена</span>
+                <span class="prices__time">Срок</span>
+              </div>
+               
+              
+              <div class="prices__row">
+                <span class="prices__service">Диагностика</span>
+                <span class="prices__price">Бесплатно</span>
+                <span class="prices__time">30 мин </span>
+                <button class="prices__button">Заказать</button>
+              </div>
+              <div class="prices__row">
+                <span class="prices__service">Замена дисплея</span>
+                <span class="prices__price">1000 р </span>
+                <span class="prices__time">30-120 мин </span>
+                <button class="prices__button">Заказать</button>
+              </div>
+                <div class="prices__row">
+                <span class="prices__service">Замена полифонического динамика</span>
+                <span class="prices__price">1000 р </span>
+                <span class="prices__time">30-120 мин </span>
+                <button class="prices__button">Заказать</button>
+              </div>
+                <div class="prices__row">
+                <span class="prices__service">Тестирование с выдачей технического заключения</span>
+                <span class="prices__price">1000 р </span>
+                <span class="prices__time">30-120 мин </span>
+                <button class="prices__button">Заказать</button>
+              </div>
+                <div class="prices__row">
+                <span class="prices__service">Замена программного обеспечения</span>
+                <span class="prices__price">1000 р </span>
+                <span class="prices__time">30-120 мин </span>
+                <button class="prices__button">Заказать</button>
+              </div>
+             
+             <div class="prices__info">
+              <p class="prices__note">
+                Все цены указаны с учётом НДС. Стоимость ремонта указана 
+                на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку. 
+              </p>
+              <a class="prices__offer" href="#">
+                Получить коммерческое предложение
+              </a>
+             </div>
+
+             
+            </div>
+         </section>
+         <footer class="footer">
+          <div class="footer__copyright">
+            &copy; 2019 CPS<br>
+             Разработано командой Apesong
+          </div>
+          <a class="footer__privacy" href="#">
+            Политика конфиденциальности
+          </a>
+          <div class="footer__information">
+            Информация, размещённая на данной странице, не является публичной офертой
+          </div>
+         </footer>
     
    
   </body>

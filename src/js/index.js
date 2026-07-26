@@ -18,6 +18,22 @@ showMoreButton.addEventListener('click', () => {
     showMoreButton.textContent = 'Показать все'
   }
 })
+const repairTypesMore = document.querySelector('.repair-types__more');
+const hiddenRepairTypes = document.querySelectorAll('.repair-types__card--hidden');
+
+repairTypesMore.addEventListener('click', () => {
+  hiddenRepairTypes.forEach((card) => {
+    card.classList.toggle('show');
+  });
+
+  repairTypesMore.classList.toggle('active');
+
+  if (repairTypesMore.classList.contains('active')) {
+    repairTypesMore.textContent = 'Скрыть';
+  } else {
+    repairTypesMore.textContent = 'Показать все';
+  }
+});
 
 const readMoreButton = document.querySelector('.services__more')
 const servicesText = document.querySelector('.services__text')
@@ -71,7 +87,7 @@ if (button && hiddenText && tabletText) {
 let brandsSwiper = null;
 
 function initBrandsSwiper() {
-  const isMobile = window.matchMedia('(max-width: 320px)').matches;
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
   if (isMobile && !brandsSwiper) {
     brandsSwiper = new Swiper('.service__brands', {
@@ -90,6 +106,40 @@ function initBrandsSwiper() {
     brandsSwiper = null;
   }
 }
+let repairTypesSwiper = null;
 
-document.addEventListener('DOMContentLoaded', initBrandsSwiper);
-window.addEventListener('resize', initBrandsSwiper);
+function initRepairTypesSwiper() {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const repairTypesElement = document.querySelector(
+    '.repair-types__cards'
+  );
+
+  if (isMobile && repairTypesElement && !repairTypesSwiper) {
+    repairTypesSwiper = new Swiper('.repair-types__cards', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+
+      pagination: {
+        el: '.repair-types__pagination',
+        clickable: true,
+      },
+    });
+  }
+
+  if (!isMobile && repairTypesSwiper) {
+    repairTypesSwiper.destroy(true, true);
+    repairTypesSwiper = null;
+  }
+}
+function initMobileSwipers() {
+  initBrandsSwiper();
+  initRepairTypesSwiper();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMobileSwipers);
+} else {
+  initMobileSwipers();
+}
+
+window.addEventListener('resize', initMobileSwipers);

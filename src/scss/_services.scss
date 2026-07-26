@@ -139,7 +139,7 @@
 
 }
 
-@media(min-width:769px) and (max-width:1119px) {
+@media(min-width:768px) and (max-width:1119px) {
     .services__content {
         display: flex;
         align-items: flex-start;
@@ -173,6 +173,21 @@
         display: block;
         -webkit-line-clamp: unset;
          overflow: visible;
+
+}  .services__more {
+    padding-left: 45px;
+    
+}
+
+
+.services__more::before,
+
+.services__more::after {
+
+    content: "";
+    left: 23px;
+
+ 
 
 }
 
