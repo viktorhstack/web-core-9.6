@@ -109,7 +109,7 @@
 .prices__offer {
     position: relative;
     display: inline-block;
-    padding: 16px 16px 16px 0;
+    padding: 8px 16px 16px 0;
     color: #1b1c21;
     font-size: 16px;
     font-weight: 500;
@@ -136,4 +136,149 @@
     max-width: calc(100% - 320px);
     box-sizing: border-box;
     }
+}
+@media (max-width: 767px) {
+  .prices {
+    margin-left: -16px;
+  }
+  .prices__row--header {
+    display: none;
+   
+  }
+
+  .prices__services {
+    position: relative;
+    overflow: hidden;
+    padding: 16px 0 0;
+    box-sizing: border-box;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+   
+  }
+
+  .prices__wrapper {
+    display: flex;
+    box-sizing: content-box;
+  }
+
+  .prices__row.swiper-slide {
+    position: relative;
+    flex: 0 0 250px;
+    width: 250px;
+    height: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+
+  .prices__service,
+  .prices__price,
+  .prices__time {
+    width: auto;
+  }
+
+  .prices__button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    margin: 0;
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+
+  .prices__pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .prices__pagination .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #dddddd;
+    opacity: 1;
+  }
+
+  .prices__pagination .swiper-pagination-bullet-active {
+    background-color: #b5b6bc;
+  }
+  .prices__service,
+  .prices__price,
+  .prices__time {
+    display: block;
+    margin: 0;
+  }
+  .prices__service {
+    margin-bottom: 12px;
+  }
+  .prices__price {
+    margin-bottom: 24px;
+    margin-top: -20px;
+  }
+  .prices__time {
+    margin-bottom: 0;
+  }
+  
+  .prices__service::before,
+  .prices__price::before,
+  .prices__time::before {
+    display: block;
+    margin-bottom: 4px;
+    color: #7e7e82;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .prices__service::before {
+    content: 'Ремонтные услуги';
+    margin-bottom: 4px;
+  }
+
+  .prices__price::before {
+    content: 'Цена';
+    margin-bottom: 4px;
+  }
+
+  .prices__time::before {
+    content: 'Срок';
+    margin-bottom: 4px;
+  }
+  .prices__info{
+   margin-left: 32px;
+   margin-right: 32px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer__copyright,
+  .footer__privacy {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .footer__information {
+    width: 312px;
+    margin: 0 ;
+    text-align: center;
+    margin-left: -45px;
+  }
+
 }

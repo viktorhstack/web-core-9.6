@@ -2,6 +2,7 @@ import '../scss/style.scss'
 
 import Swiper from 'swiper/bundle';
 
+
 const showMoreButton = document.querySelector('.show__more-btn')
 const hiddenBrands = document.querySelectorAll('.hidden__brand')
 
@@ -131,9 +132,34 @@ function initRepairTypesSwiper() {
     repairTypesSwiper = null;
   }
 }
+  let pricesSwiper = null;
+
+function initPricesSwiper() {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const pricesElement = document.querySelector('.prices__services');
+
+  if (isMobile && pricesElement && !pricesSwiper) {
+    pricesSwiper = new Swiper('.prices__services', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+
+      pagination: {
+        el: '.prices__pagination',
+        clickable: true,
+      },
+    });
+  }
+
+  if (!isMobile && pricesSwiper) {
+    pricesSwiper.destroy(true, true);
+    pricesSwiper = null;
+  }
+
+}
 function initMobileSwipers() {
   initBrandsSwiper();
   initRepairTypesSwiper();
+  initPricesSwiper();
 }
 
 if (document.readyState === 'loading') {
